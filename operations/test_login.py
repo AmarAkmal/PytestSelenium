@@ -19,6 +19,7 @@ def test_setup():
 @allure.severity(severity_level="CRITICAL")
 def test_validLogin(test_setup):
     driver.get("http://192.168.5.25/user-management/auth/login");
+    driver.implicitly_wait(20)
     driver.find_element_by_id("inputEmail3").clear();
     driver.find_element_by_id("inputPassword3").clear();
     enter_username("admin@mail.com");
