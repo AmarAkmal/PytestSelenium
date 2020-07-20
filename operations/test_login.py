@@ -2,12 +2,14 @@ import pytest
 from selenium import webdriver
 import allure
 
+
 # https://www.youtube.com/watch?v=CKTIkGxCNXU
+
 @pytest.fixture()
 def test_setup():
     global driver
     driver = webdriver.Chrome()
-    driver.implicitly_wait(10)
+    driver.implicitly_wait(20)
     driver.maximize_window();
     yield
     driver.quit()
