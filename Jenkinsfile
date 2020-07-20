@@ -12,7 +12,7 @@ pipeline {
     }
     stage('test') {
       steps {
-        sh 'python test.py'
+        sh 'cd operations && pytest -v -s --alluredir=test_login.py'
       }
       post {
         always {
