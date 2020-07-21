@@ -58,6 +58,6 @@ def enter_password(password):
     driver.find_element_by_id("inputPassword3").send_keys(password)
 
 
-@allure.step("{0}")
-def log(message):
-    print(message)
+# @allure.step("{0}")
+# def log(message):
+#     print(message)
