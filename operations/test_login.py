@@ -8,11 +8,11 @@ import allure
 @pytest.fixture()
 def test_setup():
     global driver
-    driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
-    driver.implicitly_wait(20)
-    driver.maximize_window();
-    yield
-    driver.quit()
+    # driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
+    # driver.implicitly_wait(20)
+    # driver.maximize_window();
+    # yield
+    # driver.quit()
 
 
 @allure.description("Validate OrangeHRM with valid credentials")
