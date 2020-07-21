@@ -8,25 +8,24 @@ import allure
 @pytest.fixture()
 def test_setup():
     global driver
-    # driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
-    # driver.implicitly_wait(20)
-    # driver.maximize_window();
-    # yield
-    # driver.quit()
+    driver = webdriver.Chrome(executable_path='/usr/local/bin/chromedriver')
+    driver.implicitly_wait(20)
+    driver.maximize_window();
+    yield
+    driver.quit()
 
 
 @allure.description("Validate OrangeHRM with valid credentials")
 @allure.severity(severity_level="CRITICAL")
 def test_validLogin(test_setup):
-    print(123321)
-    # driver.get("http://192.168.5.25/user-management/auth/login");
-    # driver.implicitly_wait(20)
-    # driver.find_element_by_id("inputEmail3").clear();
-    # driver.find_element_by_id("inputPassword3").clear();
-    # enter_username("admin@mail.com");
-    # enter_password("111111");
-    # log("Clicking login button")
-    # driver.find_element_by_id("login-form").click();
+    driver.get("http://192.168.5.25/user-management/auth/login");
+    driver.implicitly_wait(20)
+    driver.find_element_by_id("inputEmail3").clear();
+    driver.find_element_by_id("inputPassword3").clear();
+    enter_username("admin@mail.com");
+    enter_password("111111");
+    log("Clicking login button")
+    driver.find_element_by_id("login-form").click();
     # assert "dashboard" in driver.current_url
 
 
