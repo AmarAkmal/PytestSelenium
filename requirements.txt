@@ -3,7 +3,7 @@ allure-python-commons==2.8.16
 atomicwrites==1.4.0
 attrs==19.3.0
 behave==1.2.6
-certifi==2020.6.20
+certifi==2022.12.7
 chardet==3.0.4
 colorama==0.4.3
 extras==1.0.0
